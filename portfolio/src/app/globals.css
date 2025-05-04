@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+body {
+  background-color: #121215;
+}
+.OverContainer{
+  /* background-color: #16161ada; */
+background-color: blue;
+display:flex;
+justify-content: space-around;
+min-height: 3.9rem;
+align-items: center;
+}
+
+.PostingContainer{
+  display: flex;
+  background-color: yellow;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap:1px;
+}
+.Nav_Buttons_1{
+  font-size: 1.3rem;
+  color: white;
+}
+#JohnGutierrez{
+  font-size: 1.5rem;
+}
+.Nav_Buttons_1:hover{
+  font-size: 1.6rem;
+
+}
