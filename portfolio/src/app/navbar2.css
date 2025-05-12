@@ -1,0 +1,27 @@
+/* Ensure the body takes the full viewport height with no margins */
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+#Navbar2Section {
+ background-color:  #36363dda;
+  display: flex;
+  flex-direction: column;
+justify-content: space-between;
+  width: 200px;
+  height: 92vh;
+ box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;;
+}
+button{
+     font-size: 1.3rem;
+  text-decoration: none;
+  font-style: Roboto;
+    color: white;
+   
+}/* Style the <ul> to distribute content within the full height */
+button:hover{
+    text-decoration: underline;
+  text-decoration-thickness: .3rem;
+  text-underline-offset: .4rem;
+}
