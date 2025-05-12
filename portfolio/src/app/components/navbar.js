@@ -1,6 +1,9 @@
+import { useState } from 'react';
 import '../globals.css'; 
  
 export default function NavBar(){
+    const [Title,setTitle] = useState("Blog")
+    
 return(<>
 
         <section className = "OverContainer">
@@ -12,13 +15,16 @@ return(<>
             <button id = "Projects" className = "Nav_Buttons_1">
                 Projects
             </button>
-            <div>
-            <input
-        type="text"
-        placeholder="Search..."
-        className="search-input"
-      />
-                </div> 
+            <div id="SearchBar">
+  <img src="search-icon.png" alt="Search Icon" />
+  <input
+    type="text"
+    placeholder="Search..."
+    className="SearchProjects"
+    aria-label="Search Projects"
+  />
+</div>
+
             <section className ="PostingContainer">
                 <button id = "Blogs" className = "Nav_Buttons_1">
                     Blogs
