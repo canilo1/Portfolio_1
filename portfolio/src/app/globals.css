@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+body {
+  background-color: #121215;
+}
+.OverContainer{
+background-color: #27272eda;
+display:flex;
+gap: 8rem;
+min-height: 5rem;
+align-items: center;
+
+}
+
+.PostingContainer{
+  display: flex;
+  background-color: yellow;
+  flex-direction: column;
+  color: black;
+  justify-content: space-evenly;
+  gap:6px;
+}
+.Nav_Buttons_1 {
+  font-size: 1.3rem;
+  color: white;
+  text-decoration: none;
+  transition: text-decoration 0.3s ease;
+  font-style: Roboto;
+
+}
+
+.Nav_Buttons_1:hover {
+  text-decoration: underline;
+  text-decoration-thickness: .3rem;
+  text-underline-offset: .4rem;
+  
+}
+#JohnGutierrez{
+  justify-content: flex-end;
+  letter-spacing: .2rem;
+}
+
+#SearchBar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #1e1e1e;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 300px; /* Adjusted for better fit */
+}
+
+#SearchBar img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.SearchProjects {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  outline: none;
+  font-family: 'Roboto', sans-serif; /* Consistent font */
+}
+
+.SearchProjects::placeholder {
+  color: #888;
+}
+
