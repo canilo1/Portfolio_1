@@ -1,4 +1,7 @@
-const ProfilePage = () => {
+const ProfilePage = ({ Visibility }) => {
+  console.log("This is the visbility", Visibility);
+  if (!Visibility) return null;
+
   return (
     <>
       <div className="profile-container">
@@ -9,7 +12,7 @@ const ProfilePage = () => {
         />
         <h1>John Gutierrez</h1>
         <p>Followers: 123</p>
-        <p>Following: 200</p> {/* Add actual data if available */}
+        <p>Following: 200</p>
       </div>
 
       <section className="about-page">
