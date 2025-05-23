@@ -1,83 +1,55 @@
-const ProfilePage = ({ Visibility }) => {
-  console.log("This is the visbility", Visibility);
-  if (!Visibility) return null;
+import React from 'react';
+import "../pages/pages.css"
+import John1 from '../images/John1.jpg' // Adjusted path based on typical React structure
+
+const Portfolio1 = () => {
+  const VISIBILITY = true;
+
+  if (!VISIBILITY) return null;
 
   return (
-    <>
+    <section className="profile-page">
       <div className="profile-container">
         <img
-          src="https://i.pinimg.com/originals/4c/8f/0b/4c8f0b1a2d3e5a7d6e9f3a2b5c4e1f3b.jpg"
+          src={John1}
           alt="Profile Background"
           className="profile-background"
         />
-        <h1>John Gutierrez</h1>
-        <p>Followers: 123</p>
-        <p>Following: 200</p>
+        <div className="profile-info">
+          <h1 id="HeaderProfile">John Gutierrez</h1>
+          <div id="Followers">
+            <p>Followers: 123</p>
+            <p>Following: 200</p>
+          </div>
+        </div>
       </div>
-
-      <section className="about-page">
-        <h2>About</h2>
-        <p>Hi, I’m John. hfwbfabfbowa</p>
-      </section>
-
-      <section className="communities">
-        <h2>Communities / Organizations</h2>
-        <ul>
-          <li>
-            <h3>Community 1</h3>
-            <p>Details about Community 1</p>
-          </li>
-          <li>
-            <h3>Community 2</h3>
-            <p>Details about Community 2</p>
-          </li>
-          <li>
-            <h3>Community 3</h3>
-            <p>Details about Community 3</p>
-          </li>
+      <nav className="navbar">
+        <h1>John Gutierrez</h1>
+        <ul className="nav-links">
+          <li>Projects</li>
+          <li>Contact Page</li>
+          <li>Search...</li>
+          <li>Settings</li>
         </ul>
-      </section>
-
-      <section className="favorite-projects">
-        <h2>Favorite Projects</h2>
-        <ul>
-          <li>
-            <h3>Favorite Project 1</h3>
-            <p>Details about Project 1</p>
-          </li>
-          <li>
-            <h3>Favorite Project 2</h3>
-            <p>Details about Project 2</p>
-          </li>
-          <li>
-            <h3>Favorite Project 3</h3>
-            <p>Details about Project 3</p>
-          </li>
+      </nav>
+      <aside className="sidebar">
+        <ul className="side-links">
+          <li>Home</li>
+          <li>Profile</li>
+          <li>Messages</li>
+          <li>Network</li>
+          <li>Branding</li>
+          <li>Portfolio Archive</li>
+          <li>Services</li>
+          <li>Blog</li>
+          <li>Github</li>
+          <li>Shop</li>
+          <li>Support</li>
+          <li>Hire Me</li>
         </ul>
-      </section>
-
-      <section className="certifications">
-        <h2>Certifications</h2>
-        <ul>
-          <li>
-            <h3>Certification 1</h3>
-            <p>Details about Certification 1</p>
-            <a href="#">Organization Link</a>
-          </li>
-          <li>
-            <h3>Certification 2</h3>
-            <p>Details about Certification 2</p>
-            <a href="#">Organization Link</a>
-          </li>
-          <li>
-            <h3>Certification 3</h3>
-            <p>Details about Certification 3</p>
-            <a href="#">Organization Link</a>
-          </li>
-        </ul>
-      </section>
-    </>
+      </aside>
+    </section>
   );
 };
 
-export default ProfilePage;
+export default Portfolio1;

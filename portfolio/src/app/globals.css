@@ -9,7 +9,7 @@ body {
 .OverContainer {
   background-color: #121215;
   justify-content: space-between;
-  outline: 1px solid red;
+
   display: flex;
   height: 47px;
   padding: 3px;

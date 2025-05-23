@@ -1,3 +1,31 @@
-.profile-container{
-    
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+
+.OverContainer {
+  background-color: #121215;
+  justify-content: space-between;
+  
+  display: flex;
+  height: 47px;
+  padding: 3px;
+  transition: box-shadow 0.3s ease;
+}
+
+.Nav_Buttons_1 {
+  background: none;
+  border: none;
+  color: white;
+  font-family: 'Gill Sans', sans-serif;
+  font-size: 20px;
+}
+
+.Nav_Buttons_1:hover {
+  text-decoration: underline;
+  text-underline-offset: 7.5px;
+  text-decoration-thickness: 3px;
 }

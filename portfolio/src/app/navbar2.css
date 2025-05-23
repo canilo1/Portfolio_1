@@ -2,11 +2,27 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  background-color: white;
-  width: 250px;
-  min-width: 200px;
-  max-width: 300px;
-  outline: 1px solid red;
-  padding: 10px;
+background-color: #2e2e35;
+  padding: 12px;
   box-sizing: border-box;
+  justify-content: space-between;
 }
+.NavBar2Buttons{
+  
+  background: none;
+  border: none;
+  color: white;
+  font-family: 'Gill Sans', sans-serif;
+  font-size: 20px;
+
+}
+
+
+
+.NavBar2Buttons:hover {
+  text-decoration: underline;
+  text-underline-offset: 7.5px;
+  text-decoration-thickness: 3px;
+}
+
+
