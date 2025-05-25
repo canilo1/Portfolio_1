@@ -13,7 +13,7 @@ body {
   display: flex;
   height: 47px;
   padding: 3px;
-  transition: box-shadow 0.3s ease;
+    box-shadow: 0px -2px 40px -7px #97969698;
 }
 
 .Nav_Buttons_1 {

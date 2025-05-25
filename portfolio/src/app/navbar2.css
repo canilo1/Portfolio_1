@@ -6,6 +6,7 @@ background-color: #2e2e35;
   padding: 12px;
   box-sizing: border-box;
   justify-content: space-between;
+  box-shadow: rgba(151, 150, 150, 0.596) 0px 60px 40px -7px;
 }
 .NavBar2Buttons{
   
