@@ -15,18 +15,17 @@ export default function NavBar2() {
   return (
     <section id="Navbar2Section">
       <button className = "NavBar2Buttons"  onClick={() => setIsOpenBugger(!isOpen)}>Profile</button>
-
-      {isOpen &&
-        createPortal(
-          <div
-            style={{
-
-            }}
-          >
-            <ProfilePage Visibility={isOpen} />
-          </div>,
-          document.body
-        )}
+{isOpen &&
+  createPortal(
+    <div
+      style={{
+        
+      }}
+    >
+      <ProfilePage Visibility={isOpen} />
+    </div>,
+    document.body
+  )}
 
       <button className = "NavBar2Buttons">Messages</button>
       <button className = "NavBar2Buttons">Friends</button>

@@ -1,31 +1,86 @@
-html,
-body {
-  height: 100%;
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%; /* Full viewport height */
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* At least viewport height, can grow */
+  margin: 0;
   background-color: black;
+  color: white;
+  font-family: 'Inter', sans-serif;
 }
 
 .OverContainer {
-  background-color: #121215;
-  justify-content: space-between;
-
   display: flex;
-  height: 47px;
-  padding: 3px;
-    box-shadow: 0px -2px 40px -7px #97969698;
+  justify-content: space-between;
+  background-color: rgb(34, 34, 32);
+  position: sticky;
+  top: 0;
+  box-shadow: 2px 4px 6px rgba(255, 0, 0, 0.3); /* Adjusted shadow with alpha */
+  padding: clamp(5px, 1.5vw, 15px); /* Scales padding between 5px and 15px */
+  width: 100%;
+  box-sizing: border-box;
+  flex-wrap: wrap; /* Allow items to wrap on small screens */
+  gap: 0.5rem; /* Space between wrapped items */
 }
 
 .Nav_Buttons_1 {
-  background: none;
   border: none;
+  background-color: transparent;
   color: white;
-  font-family: 'Gill Sans', sans-serif;
-  font-size: 20px;
+  font-size: clamp(0.8rem, 2vw, 1.2rem); /* Scales font size */
+  white-space: nowrap; /* Prevent text wrapping within buttons */
+  padding: 0 0.5vw; /* Relative padding */
 }
 
 .Nav_Buttons_1:hover {
   text-decoration: underline;
-  text-underline-offset: 7.5px;
-  text-decoration-thickness: 3px;
+  text-underline-offset: 0.3rem;
+  text-decoration-thickness: 0.1rem;
+}
+
+.main-layout-wrapper {
+  background-color: yellow;
+  flex: 1; /* Grow to fill remaining space */
+  display: flex; /* Make it a flex container */
+  flex-direction: column; /* Stack children vertically */
+}
+
+.main-content-area {
+  background-color: green;
+  flex: 1; /* Stretch to fill remaining space in .main-layout-wrapper */
+}
+
+/* Media query for small screens (e.g., phones < 600px) */
+@media (max-width: 600px) {
+  .OverContainer {
+    padding: 5px;
+    gap: 3px; /* Smaller gap on tiny screens */
+  }
+
+  .Nav_Buttons_1 {
+    font-size: clamp(0.7rem, 1.5vw, 1rem); /* Smaller font on small screens */
+    padding: 0 2px;
+  }
+}
+
+/* Media query for large screens (e.g., > 1200px) */
+@media (min-width: 1200px) {
+  .OverContainer {
+    padding: 15px;
+    gap: 1rem; /* Larger gap on big screens */
+  }
+
+  .Nav_Buttons_1 {
+    font-size: 1.2rem;
+    padding: 0 1vw;
+  }
 }

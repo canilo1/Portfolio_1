@@ -3,29 +3,34 @@ import '../pages/pages.css';
 import John1 from '../images/John1.jpg';
 
 const Portfolio1 = () => {
-  const VISIBILITY = true;
-  if (!VISIBILITY) return null;
+
 
   return (
     <section className="profile-page">
-      <div className="profile-page">
-        <img
+      <div className="profile-page" >
+        <div className="profile-page" id = "ProfileHeader">
+          <img
           src={John1}
           alt="Profile"
           className="profile-image"
-        />
-        <div className="profile-page">
+          />
+        <div id="ProfileInfo">
           <h1 id="HeaderProfile">John Gutierrez</h1>
           <div id="Followers">
             <p>Followers: 123</p>
             <p>Following: 200</p>
           </div>
         </div>
+        </div>
       </div>
 
       <div className="profile-buttons">
-        <button>About</button>
+        <section id = "AboutButton">
+     <button>About</button>
+        </section>
+       <section id = "CreationsButton">
         <button>Creations</button>
+        </section>
       </div>
 
       <div className="AboutVisibility">
