@@ -13,10 +13,13 @@ export default function Home() {
   return (
     <>
       <NavBar />
+     
       <div className="main-layout-wrapper">
-        <NavBar2 />
+            <NavBar2 /> 
         <div className="main-content-area">
-          <Profile />
+        
+             <Profile />
+    
           </div>
 
         </div>

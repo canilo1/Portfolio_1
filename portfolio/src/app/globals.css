@@ -1,74 +1,79 @@
+/* Reset and base styles */
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box; /* Ensures padding doesn't affect width */
 }
 
 html {
-  height: 100%; /* Full viewport height */
+  height: 100%;
 }
 
 body {
-  display: flex;
+  display: flex !important;
   flex-direction: column;
-  min-height: 100vh; /* At least viewport height, can grow */
+  min-height: 100vh;
   margin: 0;
-  background-color: black;
-  color: white;
-  font-family: 'Inter', sans-serif;
+  background-color: #1a1a1a; /* Roblox's dark gray background */
+  color: #e0e0e0; /* Light gray text */
+  font-family: 'Roboto', sans-serif; /* Roblox uses a sans-serif font like Roboto */
+  overflow: hidden;
 }
 
+/* Navigation bar */
 .OverContainer {
   display: flex;
   justify-content: space-between;
-  background-color: rgb(34, 34, 32);
+  background-color: #1a1a1a;
   position: sticky;
   top: 0;
-  box-shadow: 2px 4px 6px rgba(255, 0, 0, 0.3); /* Adjusted shadow with alpha */
-  padding: clamp(5px, 1.5vw, 15px); /* Scales padding between 5px and 15px */
+  padding: clamp(5px, 1.5vw, 15px);
   width: 100%;
   box-sizing: border-box;
-  flex-wrap: wrap; /* Allow items to wrap on small screens */
-  gap: 0.5rem; /* Space between wrapped items */
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  flex-shrink: 0;
+  z-index: 1;
+  border-bottom: 1px solid #39424d; /* Subtle border like Roblox */
 }
 
 .Nav_Buttons_1 {
   border: none;
+  border-bottom: 2px solid transparent; /* Added to allow hover effect */
   background-color: transparent;
-  color: white;
-  font-size: clamp(0.8rem, 2vw, 1.2rem); /* Scales font size */
-  white-space: nowrap; /* Prevent text wrapping within buttons */
-  padding: 0 0.5vw; /* Relative padding */
+  color: #e0e0e0;
+  font-size: clamp(0.8rem, 2vw, 1.2rem);
+  white-space: nowrap;
+  padding: 0 8px; /* Added padding for better click area */
+ 
 }
 
 .Nav_Buttons_1:hover {
-  text-decoration: underline;
-  text-underline-offset: 0.3rem;
-  text-decoration-thickness: 0.1rem;
+  border-bottom-color: #b8c7d9; /* Lighter gray for hover, Roblox style */
 }
 
+/* Main layout */
 .main-layout-wrapper {
-  background-color: yellow;
-  flex: 1; /* Grow to fill remaining space */
-  display: flex; /* Make it a flex container */
-  flex-direction: column; /* Stack children vertically */
+  display: flex;
+  flex: 1; /* Ensures it takes remaining space */
 }
 
 .main-content-area {
-  background-color: green;
-  flex: 1; /* Stretch to fill remaining space in .main-layout-wrapper */
+  flex: 1;
+ 
+  padding: 16px; /* Adds spacing like Roblox */
 }
 
 /* Media query for small screens (e.g., phones < 600px) */
 @media (max-width: 600px) {
   .OverContainer {
     padding: 5px;
-    gap: 3px; /* Smaller gap on tiny screens */
+    gap: 3px;
   }
 
   .Nav_Buttons_1 {
-    font-size: clamp(0.7rem, 1.5vw, 1rem); /* Smaller font on small screens */
-    padding: 0 2px;
+    font-size: clamp(0.7rem, 1.5vw, 1rem);
+    padding: 0 4px; /* Adjusted padding for smaller screens */
   }
 }
 
@@ -76,7 +81,7 @@ body {
 @media (min-width: 1200px) {
   .OverContainer {
     padding: 15px;
-    gap: 1rem; /* Larger gap on big screens */
+    gap: 1rem;
   }
 
   .Nav_Buttons_1 {

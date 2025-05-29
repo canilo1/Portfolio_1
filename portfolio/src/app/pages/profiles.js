@@ -3,33 +3,33 @@ import '../pages/pages.css';
 import John1 from '../images/John1.jpg';
 
 const Portfolio1 = () => {
-
-
   return (
     <section className="profile-page">
-      <div className="profile-page" >
-        <div className="profile-page" id = "ProfileHeader">
+      <div className="profile-following">
+        <div className="profile-page" id="ProfileHeader">
           <img
-          src={John1}
-          alt="Profile"
-          className="profile-image"
+            src={John1}
+            alt="Profile"
+            className="profile-image"
           />
-        <div id="ProfileInfo">
-          <h1 id="HeaderProfile">John Gutierrez</h1>
-          <div id="Followers">
-            <p>Followers: 123</p>
-            <p>Following: 200</p>
+          <div id="ProfileInfo">
+            <h1 id="HeaderProfile">John Gutierrez</h1>
+            {/* Fixed: 'link' is not a valid tag, replaced with 'a' for hyperlink */}
+            <h2><a href="https://github.com/canilo1">@canilo</a></h2>
+            <div id="Followers">
+              <p>Followers: 123</p>
+              <p>Following: 200</p>
+            </div>
           </div>
-        </div>
         </div>
       </div>
 
       <div className="profile-buttons">
-        <section id = "AboutButton">
-     <button>About</button>
+        <section id="AboutButton">
+          <button>About</button>
         </section>
-       <section id = "CreationsButton">
-        <button>Creations</button>
+        <section id="CreationsButton">
+          <button>Creations</button>
         </section>
       </div>
 
@@ -57,7 +57,8 @@ const Portfolio1 = () => {
       <section className="favorite-creations">
         <h2>Favorite Creations</h2>
         <div className="creation-card">
-          <img src="" alt="Creation 1" />
+          {/* Fixed: Added a placeholder image src */}
+          <img src={John1} alt="Creation 1" />
           <h3>Creation Name</h3>
           <p>This is what this creation is about.</p>
         </div>

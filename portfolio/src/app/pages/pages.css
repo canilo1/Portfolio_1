@@ -1,0 +1,76 @@
+.profile-page {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* Reduced gap to match Roblox's tighter spacing */
+  margin-bottom: 16px;
+  font-family: 'Roboto', sans-serif; /* Roblox uses a sans-serif font like Roboto */
+  font-weight: 400;
+  line-height: 1.4em;
+  
+  color: #e0e0e0; /* Light gray text for contrast */
+}
+
+.profile-following {
+  padding: 16px; /* Reduced padding for a more compact look */
+
+}
+
+#ProfileHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-bottom: 1px solid #39424d; /* Roblox often uses subtle borders */
+  padding-bottom: 12px;
+}
+
+#Followers {
+  display: flex;
+  gap: 0.8rem; /* Slightly tighter gap */
+  font-size: 0.9rem; /* Smaller font for stats, like Roblox */
+  color: #b8c7d9; /* Lighter gray for secondary text */
+}
+
+#ProfileInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem; /* Reduced gap for compactness */
+}
+
+#ProfileInfo p {
+  font-size: 1rem; /* Smaller font size to match Roblox */
+  font-weight: 400; /* Less bold for a softer look */
+}
+
+#ProfileInfo h1 {
+  font-size: 1.8rem; /* Slightly smaller heading */
+  font-weight: 500; /* Less bold to match Roblox's style */
+  color: #ffffff; /* White for primary text */
+}
+
+.profile-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem; /* Tighter gap for buttons */
+ 
+  padding: 8px 0; /* Added padding for separation */
+}
+
+.profile-buttons button {
+  width: 20rem; /* Smaller width for a more compact look */
+  height: 2.5rem; /* Slightly shorter height */
+  border: 1px solid #39424d; /* Added subtle border like Roblox tabs */
+  font-size: 1rem; /* Smaller font */
+  font-weight: 400; /* Less bold */
+  background-color: #323942; /* Darker gray for buttons */
+  color: #e0e0e0; /* Light gray text */
+ 
+}
+
+.profile-buttons button:hover {
+    border-bottom-color: gray;
+    
+}
