@@ -1,20 +1,18 @@
 .profile-page {
-  width: 100%;
+  max-width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 16px; /* Reduced gap to match Roblox's tighter spacing */
+  gap: 16px;
   margin-bottom: 16px;
-  font-family: 'Roboto', sans-serif; /* Roblox uses a sans-serif font like Roboto */
+  font-family: 'Roboto', sans-serif;
   font-weight: 400;
   line-height: 1.4em;
-  
-  color: #e0e0e0; /* Light gray text for contrast */
+  color: #e0e0e0;
 }
 
 .profile-following {
-  padding: 16px; /* Reduced padding for a more compact look */
-
+  padding: 16px;
 }
 
 #ProfileHeader {
@@ -23,124 +21,181 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  border-bottom: 1px solid #39424d; /* Roblox often uses subtle borders */
+  border-bottom: 1px solid #39424d;
   padding-bottom: 12px;
 }
 
 #Followers {
   display: flex;
-  gap: 0.8rem; /* Slightly tighter gap */
-  font-size: 0.9rem; /* Smaller font for stats, like Roblox */
-  color: #b8c7d9; /* Lighter gray for secondary text */
+  gap: 0.8rem;
+  font-size: 0.9rem;
+  color: #b8c7d9;
 }
 
 #ProfileInfo {
   display: flex;
   flex-direction: column;
-  gap: 0.4rem; /* Reduced gap for compactness */
+  gap: 0.4rem;
 }
 
 #ProfileInfo p {
-  font-size: 1rem; /* Smaller font size to match Roblox */
-  font-weight: 400; /* Less bold for a softer look */
+  font-size: 1rem;
+  font-weight: 400;
 }
 
 #ProfileInfo h1 {
-  font-size: 1.8rem; /* Slightly smaller heading */
-  font-weight: 500; /* Less bold to match Roblox's style */
-  color: #ffffff; /* White for primary text */
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #ffffff;
 }
 
 .profile-buttons {
   display: flex;
   justify-content: center;
-  gap: 0.5rem; /* Tighter gap for buttons */
- 
-  padding: 8px 0; /* Added padding for separation */
+  gap: 0.5rem;
+  padding: 8px 0;
 }
 
 .profile-buttons button {
-  width: 20rem; /* Smaller width for a more compact look */
-  height: 2.5rem; /* Slightly shorter height */
-  border: 1px solid #39424d; /* Added subtle border like Roblox tabs */
-  font-size: 1rem; /* Smaller font */
-  font-weight: 400; /* Less bold */
-  background-color: #323942; /* Darker gray for buttons */
-  color: #e0e0e0; /* Light gray text */
- 
+  width: 20rem;
+  height: 2.5rem;
+  border: 1px solid #39424d;
+  font-size: 1rem;
+  font-weight: 400;
+  background-color: #323942;
+  color: #e0e0e0;
 }
 
 .profile-buttons button:hover {
-    border-bottom-color: gray;
-    
+  border-bottom-color: gray;
 }
 
-.about-section{
+.about-section {
   display: flex;
   flex-direction: column;
   gap: 9px;
   align-items: center;
   background-color: #323942;
-
 }
-.about-section p{
+
+.about-section p {
   background-color: rgb(44, 44, 44);
-  height: 100%;
+  max-height: 100%;
   border-radius: 30px;
-  padding: 15px; 
+  padding: 15px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-weight:  20px;
-  font-size: 20px;/* 
+  font-weight: 20px;
+  font-size: 20px;
+}
 
-  f
-  Reduced padding for compactness */
+#Aboutheading {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #ffffff;
+  margin-bottom: 8px;
 }
-#Aboutheading{
-  font-size: 1.5rem; /* Smaller heading for the about section */
-  font-weight: 500; /* Less bold for a softer look */
-  color: #ffffff; /* White for primary text */
-  margin-bottom: 8px; /* Reduced margin for compactness */
-  /* Reduced margin for compactness */
-}
-.profile-content{
 
-}
 .question-mark-icon {
   display: inline-block;
   position: fixed;
-
-
 }
 
 .question-mark-icon:hover {
-  
-  height: 33px;
-  width: 23px;
+  max-height: 33px;
+  max-width: 23px;
   cursor: pointer;
 }
-#Info_question{
+
+#Info_question {
   position: fixed;
   height: fit-content;
   width: fit-content;
- background-color: #39424d;
+  background-color: #39424d;
 }
-#CommunitiesList{
- list-style-type: none;
+
+#CommunitiesList {
+  list-style-type: none;
 }
-#CommunitiesList li a  {
- text-decoration: none;
- color: inherit;        /* Use the color of the parent */
-  text-decoration: none; /* Remove underline */
+
+#CommunitiesList li a {
+  text-decoration: none;
+  color: inherit;
 }
+
 #CommunitiesList li:hover {
   font-size: larger;
 }
-.ExitButton{
+
+.ExitButton {
   align-self: flex-end;
 }
-.certifications-list{
+
+.certifications-list {
   list-style-type: none;
   text-decoration: none;
- color: inherit;        /* Use the color of the parent */
-  text-decoration: none; /* Remove underline */
+  color: inherit;
+}
+
+.favorite-creations {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: green;
+}
+
+.favorite-creations h2 {
+  display: grid;
+  grid-template-columns: auto;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #ffffff;
+  border-bottom: gray 5px solid;
+  border-bottom-width: 100%;
+}
+
+.creation-holder {
+  display: flex;
+  gap: 15px;
+}
+
+.creation-card:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s ease-in-out;
+}
+
+.creation-card {
+  border-radius: 10%;
+  height: 100px;
+  background-color: #323942;
+}
+
+.card_infos {
+  border-radius: 10%;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+}
+
+.card_infos:hover {
+  opacity: 100%;
+}
+
+.card_info_header {
+  background-color: yellow;
+  border-right: 1px solid rgb(32, 31, 31);
+}
+
+.card_info_description {
+  height: 100%;
+  width: 50%;
+  background-color: black;
+  word-wrap: break-word;
+}
+
+.card_info_description p {
+  font-size: 1.5rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 400;
 }

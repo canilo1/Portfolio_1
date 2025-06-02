@@ -7,17 +7,18 @@ const Portfolio1 = () => {
   const [showQuestion, setShowQuestion] = useState(false);
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [showInfo, setShowInfo] = useState("");
+  const [showCardInfo, setShowCardInfo] = useState(false);
 
   const handleMouseEnter = () => setShowQuestion(true);
   const handleMouseLeave = () => setShowQuestion(false);
   const handleMouseMove = (e) => setPosition({ x: e.clientX, y: e.clientY });
   const handleExit = () => setShowInfo("");
-
   const handleContextMenu = (e, infoKey) => {
     e.preventDefault();
     setPosition({ x: e.clientX, y: e.clientY });
     setShowInfo(showInfo === infoKey ? "" : infoKey);
   };
+  const handleCardInfo = () => setShowCardInfo(!showCardInfo);
 
   const infoData = {
     CTD: {
@@ -125,42 +126,17 @@ const Portfolio1 = () => {
               </div>
 
               <ul id="CommunitiesList">
-                <li className="community-item">
-                  <a
-                    href="https://codethedream.org"
-                    className="community-link"
-                    onContextMenu={(e) => handleContextMenu(e, 'CTD')}
-                  >
-                    Code The Dream
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://computingtalentinitiative.org/accelerate/"
-                    className="community-link"
-                    onContextMenu={(e) => handleContextMenu(e, 'CTI')}
-                  >
-                    CTI
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.codepath.org/"
-                    className="community-link"
-                    onContextMenu={(e) => handleContextMenu(e, 'CodePath')}
-                  >
-                    Code Path
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.bing.com/search?q=math+engineering+and+science+academy"
-                    className="community-link"
-                    onContextMenu={(e) => handleContextMenu(e, 'MESA')}
-                  >
-                    MESA
-                  </a>
-                </li>
+                {Object.entries(infoData).map(([key, { title }]) => (
+                  <li key={key} className="community-item">
+                    <a
+                      href="#"
+                      className="community-link"
+                      onContextMenu={(e) => handleContextMenu(e, key)}
+                    >
+                      {title}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </section>
 
@@ -177,18 +153,14 @@ const Portfolio1 = () => {
                   boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
                   opacity: 0.95,
                   pointerEvents: 'auto',
-                  zIndex: 999,
+                  zIndex: 999
                 }}
               >
                 <section style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                   <button
                     className="ExitButton"
                     onClick={handleExit}
-                    style={{
-                      cursor: "pointer",
-                      height: '30px',
-                      width: '30px',
-                    }}
+                    style={{ cursor: "pointer", height: '30px', width: '30px' }}
                   >
                     X
                   </button>
@@ -209,18 +181,39 @@ const Portfolio1 = () => {
           </div>
         )}
 
-        {/* Creations Section */}
         {activeSection === 'creations' && (
           <section className="favorite-creations">
             <h2>Favorite Creations</h2>
-            <div className="creation-card">
-              <img src={John1} alt="Creation 1" />
-              <h3>Creation Name</h3>
-              <p>This is what this creation is about.</p>
+            <div className="creation-holder">
+              {[1, 2, 3, 4].map((_, index) => (
+                <div key={index} className="creation-card" onClick={handleCardInfo}>
+                  <img
+                    src="https://via.placeholder.com/150"
+                    alt="Creation"
+                    className="creation-image"
+                  />
+                  <p>PythonApp</p>
+                </div>
+              ))}
             </div>
+
+           
           </section>
         )}
       </section>
+       {showCardInfo && (
+              <div className="card_infos">
+                <section className="card_info_header">
+                  <img>
+                  </img>
+ <h2>Python App</h2>
+                </section>
+               <section className='card_info_description'>
+<p> ananananananananananananananananananananananananananananan  .</p>
+               </section>
+                
+              </div>
+            )}
     </section>
   );
 };

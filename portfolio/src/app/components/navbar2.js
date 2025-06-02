@@ -1,39 +1,18 @@
 "use client";
-import { useState } from "react";
 import "../navbar2.css";
-import ProfilePage from "../pages/profiles";
-import { createPortal } from "react-dom";
 
-export default function NavBar2() {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const setIsOpenBugger = (value) => {
-    console.log("This is the value", value);
-    setIsOpen(value);
-  };
-
+export default function NavBar2({ setCurrentView }) {
   return (
     <section id="Navbar2Section">
-      <button className = "NavBar2Buttons"  onClick={() => setIsOpenBugger(!isOpen)}>Profile</button>
-{isOpen &&
-  createPortal(
-    <div
-      style={{
-        
-      }}
-    >
-      <ProfilePage Visibility={isOpen} />
-    </div>,
-    document.body
-  )}
-
-      <button className = "NavBar2Buttons">Messages</button>
-      <button className = "NavBar2Buttons">Friends</button>
-      <button className = "NavBar2Buttons">Inventory</button>
-      <button className = "NavBar2Buttons">Trade</button>
-      <button className = "NavBar2Buttons">Communities</button>
-      <button className = "NavBar2Buttons">Blog</button>
-      <button className = "NavBar2Buttons" >Github</button>
+      <button className="NavBar2Buttons" onClick={() => setCurrentView("profile")}>Profile</button>
+      <button className="NavBar2Buttons" onClick={() => setCurrentView("messages")}>Messages</button>
+      <button className="NavBar2Buttons" onClick={() => setCurrentView("friends")}>testimonials</button>
+     <button className="NavBar2Buttons" onClick={() => setCurrentView("Projectss")}>Projects</button>
+      <button className="NavBar2Buttons" onClick={() => setCurrentView("blog")}>Blog</button>
+      <button className="NavBar2Buttons" onClick={() => setCurrentView("github")}>Research</button>
+      <button className="NavBar2Buttons" onClick={() => setCurrentView("Resume")}>Resume</button>
+      <button className="NavBar2Buttons" onClick={() => setCurrentView("Experiments")}>Experiments</button>
+      <button className="NavBar2Buttons" onClick={() => setCurrentView("Contact")}>Contact</button>
     </section>
   );
 }

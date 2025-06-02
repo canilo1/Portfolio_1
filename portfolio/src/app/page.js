@@ -1,29 +1,46 @@
-// pages/home.js (assuming this is your main page component)
-"use client"; // If you're using Next.js App Router and this is a client component
+"use client";
+import { useState } from "react";
+import NavBar from './components/navbar';
+import NavBar2 from './components/navbar2';
+import ProfilePage from './pages/profiles';
 
-import NavBar from './components/navbar'; // Adjust the path as necessary
-import NavBar2 from './components/navbar2'; // Adjust the path as necessary
-import React from 'react';
-import Profile from "./pages/profiles"
-
-// Import your global CSS if it's not already handled by Next.js or your setup
-import './globals.css'; // This means "look in the current directory"
+import './globals.css';
 
 export default function Home() {
+  const [currentView, setCurrentView] = useState("profile");
+
+  const renderView = () => {
+    switch (currentView) {
+      case "profile":
+        return <ProfilePage />;
+
+      case "messages":
+        return <div>Messages page coming soon!</div>;
+      case "friends":
+        return <div>Friends page</div>;
+   
+      case "trade":
+        return <div>Trade page</div>;
+      case "communities":
+        return <div>Communities page</div>;
+      case "blog":
+        return <div>Blog page</div>;
+      case "github":
+        return <div>GitHub page</div>;
+      default:
+        return <div>Select a page from the sidebar.</div>;
+    }
+  };
+
   return (
     <>
       <NavBar />
-     
       <div className="main-layout-wrapper">
-            <NavBar2 /> 
+        <NavBar2 setCurrentView={setCurrentView} />
         <div className="main-content-area">
-        
-             <Profile />
-    
-          </div>
-
+          {renderView()}
         </div>
-
+      </div>
     </>
   );
 }
